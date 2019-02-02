@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Scoped CSS Variables and JS</title>
 </head>
+
 <body>
   <h3>Update CSS Variables with <span class='hl'>JS</span></h3>
 
@@ -24,7 +26,6 @@
   <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
 
   <style>
-
     /* START HERE */
 
     /* 2. Add variables */
@@ -33,9 +34,9 @@
       --bg: #326e96;
       --bgimg: #32963a;
       --blur: 2px;
-      --padding:10px;
+      --padding: 10px;
     }
-    
+
     /* 1. demonstrate img attributes  */
 
     /*
@@ -62,7 +63,7 @@
     }
 
     input {
-      width:100px;
+      width: 100px;
     }
 
     h3 {
@@ -71,7 +72,6 @@
   </style>
 
   <script>
-
     // CSS FIRST
 
     // 1. grab all the inputs within the controls container-use query selector
@@ -81,76 +81,77 @@
     const bgInput = document.querySelector('#bg')
     const bgimgInput = document.querySelector('#bgimg')
     const h3Input = document.querySelector('h3')
-    
-    
 
 
-    
 
-    
+
+
+
+
     // 2a. add the function
 
     function changeBlur() {
 
       console.log(this.value)
-      
+
       // write the code to change blur
       document.documentElement.style.setProperty('--blur', `${this.value}px`)
-     
+
     }
+
     function changePadding() {
 
-console.log(this.value)
+      console.log(this.value)
 
-// write the code to change padding
-document.documentElement.style.setProperty('--padding', `${this.value}px`)
+      // write the code to change padding
+      document.documentElement.style.setProperty('--padding', `${this.value}px`)
 
-}  
+    }
 
-function changeBg() {
+    function changeBg() {
 
-console.log(this.value)
+      console.log(this.value)
 
-// write the code to change background color
-document.documentElement.style.setProperty('--bg', `${this.value}`)
+      // write the code to change background color
+      document.documentElement.style.setProperty('--bg', `${this.value}`)
 
-}
+    }
 
-function changeBgimg() {
+    function changeBgimg() {
 
-console.log(this.value)
+      console.log(this.value)
 
-// write the code to change background color for the image
-document.documentElement.style.setProperty('--bgimg', `${this.value}`)
+      // write the code to change background color for the image
+      document.documentElement.style.setProperty('--bgimg', `${this.value}`)
 
-}
+    }
 
-function changeh3() {
+    function changeh3() {
 
-console.log(this)
+      console.log(this)
 
-// write the code to change heading
-// document.documentElement.style.setProperty('--h3', `${this.value}`)
+      // write the code to change heading
+      // document.documentElement.style.setProperty('--h3', `${this.value}`)
 
-h3Input.style.fontSize = '1.5em';
-h3Input.style.color = '#BADA55';
-h3Input.style.borderPadding = '1em';
-h3Input.style.textShadow = '-4px -4px 5px #ff0000'; 
-
-
-}
+      h3Input.style.fontSize = '1.5em';
+      h3Input.style.color = '#BADA55';
+      h3Input.style.borderPadding = '1em';
+      h3Input.style.textShadow = '-4px -4px 5px #ff0000';
 
 
-   
+    }
 
-      // 3. get the suffix
-      // const suffix = this.dataset.sizing || ''; // grabs px for the spacing and blur and '' if sizing cannot be found
-      
-      // setting global styles
-      // 4. create individual change
-      
-      // 5. add  document.documentElement.style.setProperty (this) to control the element clicked
-    
+
+
+
+    // 3. get the suffix
+    // const suffix = this.dataset.sizing || ''; // grabs px for the spacing and blur and '' if sizing cannot be found
+
+    // setting global styles
+    // 4. create individual change
+
+    // 5. add  document.documentElement.style.setProperty (this) to control the element clicked
+
     // 2. add listeners for both change and mouseover to all inputs
     blurInput.addEventListener("change", changeBlur)
     paddingInput.addEventListener("change", changePadding)
@@ -161,8 +162,8 @@ h3Input.style.textShadow = '-4px -4px 5px #ff0000';
 
     h3Input.addEventListener("mouseover", changeh3);
     // 6. debounce the second addEventListener parameter
-    
   </script>
 
 </body>
+
 </html>

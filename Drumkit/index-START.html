@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>JS Drum Kit</title>
   <!-- this is a link to the style sheet -->
   <link rel="stylesheet" href="style.css">
-  
+
 </head>
+
 <body>
-  
+
   <!-- Each key is represented by a div. The data(-key) attribute is a convention used accross tags-->
-  
+
   <div class="keys">
     <div data-key="65" class="key">
       <kbd>A</kbd>
@@ -61,33 +63,34 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
   <!-- java script -->
   <script>
-const audio = document.querySelector('audio');
-const keys = document.querySelectorAll('.keys');
-const key = document.querySelector('key');
+    const audio = document.querySelector('audio');
+    const keys = document.querySelectorAll('.keys');
+    const key = document.querySelector('key');
 
-function play(e) {
+    function play(e) {
 
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
 
-    key.classList.add('playing');
-    audio.play();
+      key.classList.add('playing');
+      audio.play();
 
-}
+    }
 
 
-function endSound(e){
-  //remove playing class
-  e.target.classList.remove('playing');
-}
+    function endSound(e) {
+      //remove playing class
+      e.target.classList.remove('playing');
+    }
 
-keys.forEach( function(key){
-  return key.addEventListener("transitionend", endSound);
-})
+    keys.forEach(function (key) {
+      return key.addEventListener("transitionend", endSound);
+    })
 
-window.addEventListener('keydown', play);
-</script>
+    window.addEventListener('keydown', play);
+  </script>
 
 
 </body>
+
 </html>

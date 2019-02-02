@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Console Tricks!</title>
 </head>
+
 <body>
 
   <p class="break-down" onClick="makeGreen()">×BREAK×DOWN×</p>
   <p class="name" onmouseover="makeRed()">Arjun</p>
 
   <script>
-    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
-    
+    const dogs = [{
+      name: 'Snickers',
+      age: 2
+    }, {
+      name: 'hugo',
+      age: 8
+    }];
+
     function makeGreen() {
       const p = document.querySelector('.break-down');
       // 'const'(constant) is a fixed unchangable value unlike 'let'(variable) which allows change
-      p.style.color = '#BADA55'; 
+      p.style.color = '#BADA55';
       p.style.fontSize = '50px';
-      p.style.border ='3px solid #FF0000';
+      p.style.border = '3px solid #FF0000';
       p.style.borderPadding = '1em';
-      p.style.textShadow = '-4px -4px 5px #ff0000'; 
+      p.style.textShadow = '-4px -4px 5px #ff0000';
       //console.dir(p);
     }
 
-    function makeRed(){
+    function makeRed() {
       const arjun = document.querySelector('.name');
       arjun.style.fontSize = '50px';
     }
 
-    
-    
+
+
 
     // console.table(dogs);
     // console.log('1+1');
-    
+
 
     // Regular
 
@@ -58,7 +66,7 @@
     // counting
 
     // timing
-
   </script>
 </body>
+
 </html>
