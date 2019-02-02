@@ -13,15 +13,27 @@
   <style>
     .header {
       border: 10px solid rgb(255, 0, 0);
+      margin-bottom: 7px
     }
 
     .content {
       border: 10px solid rgb(81, 201, 25);
+      margin: 7px
     }
 
     .sidebar {
       border: 10px solid rgb(25, 116, 201);
+      margin: 7px
     }
+
+    /* add the css here */
+
+    .flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+}
+
+
   </style>
 
   <div class="header">
@@ -33,25 +45,30 @@
     </h1>
   </div>
 
-  <div class="sidebar">
-    <a href="./Drumkit/index-START.html">My computer Drumkit</a>
-    <br></br>
-    <a href="./Slide in on scroll/image-animations-START.html">A program when you scroll down an image will slide in</a>
-    <br></br>
-    <a href="./css variables/css-variables.html">This is a masterpiece</a>
-    <br></br>
-    <a href="./Clock/clock.html">My coded clock</a>
-    <!-- <a href="./Developer tools/Developer-tools-START.html">My computer Drumkit</a> -->
+
+  <!-- Wrap the sidebar and content in a flex contain -->
+
+
+  <div class="flex-container">
+    <div class="sidebar">
+      <a href="./Drumkit/index-START.html">My computer Drumkit</a>
+      <br></br>
+      <a href="./Slide in on scroll/image-animations-START.html">A program when you scroll down an image will slide in</a>
+      <br></br>
+      <a href="./css variables/css-variables.html">This is a masterpiece</a>
+      <br></br>
+      <a href="./Clock/clock.html">My coded clock</a>
+      <!-- <a href="./Developer tools/Developer-tools-START.html">My computer Drumkit</a> -->
+    </div>
+
+    <div class="content">
+
+      <p>
+        This is my portfolio. All the code I have created will be stored here
+      </p>
+
+    </div>
   </div>
-
-  <div class="content">
-
-    <p>
-      This is my portfolio. All the code I have created will be stored here
-    </p>
-
-  </div>
-
 
 
 </body>
