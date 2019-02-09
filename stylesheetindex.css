@@ -1,6 +1,10 @@
 
   /* Styles */
-  
+  body{
+    background-color:yellowgreen;
+  }
+
+
   .header {
     border: 3px solid rgb(255, 0, 0);
     margin-bottom: 7px;
