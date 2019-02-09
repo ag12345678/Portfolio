@@ -1,0 +1,39 @@
+
+  /* Styles */
+  
+  .header {
+    border: 3px solid rgb(255, 0, 0);
+    margin-bottom: 7px;
+    padding: 2px;
+  
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  .content {
+    border: 3px solid rgb(81, 201, 25);
+    margin: 7px;
+    flex-grow: 6;
+    padding: 2px;
+    padding: 2px;
+    text-align: left;
+  }
+
+  .sidebar {
+    border: 3px solid rgb(212, 134, 17);
+    margin: 7px;
+    flex-grow: 1;
+    padding: 4px;
+    padding: 2px;
+    text-align: left;
+  }
+
+  /* add the css here */
+
+  .flex-container {
+    display: flex;
+    background-color: DodgerBlue;
+    justify-content: center;
+  }
