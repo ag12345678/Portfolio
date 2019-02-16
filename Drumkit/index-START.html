@@ -61,13 +61,18 @@
   <audio data-key="74" src="sounds/snare.wav"></audio>
   <audio data-key="75" src="sounds/tom.wav"></audio>
   <audio data-key="76" src="sounds/tink.wav"></audio>
+  
+  
   <!-- java script -->
   <script>
+
     const audio = document.querySelector('audio');
     const keys = document.querySelectorAll('.keys');
     const key = document.querySelector('key');
 
     function play(e) {
+      console.log("Keyboard press")
+      console.log(e.keyCode)
 
       const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
       const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
@@ -77,23 +82,36 @@
 
     }
 
-
+    // Creating functions
     function endSound(e) {
       //remove playing class
       e.target.classList.remove('playing');
     }
 
-    function ontouchtest (){
-      alert("this has worked")
+    function ontouchtest (e){
+      // to make mouseover work as well as having the keys to press(also for ios/mobile compatibility(posibility(maybe in a diferent function)))
+      console.log("Click")
+      console.log(e.target)
+
+      // replace e.keycode with e.target (the data-key artribute)
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+
+      key.classList.add('playing');
+      audio.play();
+      
+
     }
 
     keys.forEach(function (key) {
       return key.addEventListener("transitionend", endSound);
     })
 
+
+    // listening and calling a function
     window.addEventListener('keydown', play);
-    window.addEventListener('ontouchstart',ontouchtest );
-    window.addEventListener('mouseover', ontouchtest);
+    // window.addEventListener('ontouchstart', ontouchtest );
+    window.addEventListener('click', ontouchtest);
   </script>
 
 
