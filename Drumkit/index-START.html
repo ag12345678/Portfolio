@@ -83,12 +83,17 @@
       e.target.classList.remove('playing');
     }
 
+    function ontouchtest (){
+      alert("this has worked")
+    }
+
     keys.forEach(function (key) {
       return key.addEventListener("transitionend", endSound);
     })
 
     window.addEventListener('keydown', play);
-    window.addEventListener('ontouchstart',play );
+    window.addEventListener('ontouchstart',ontouchtest );
+    window.addEventListener('mouseover', ontouchtest);
   </script>
 
 
