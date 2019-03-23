@@ -14,104 +14,59 @@
   <!-- Each key is represented by a div. The data(-key) attribute is a convention used accross tags-->
 
   <div class="keys">
-    <div data-key="65" class="key">
+    <div data-key="65" data-letter="A" class="key">
       <kbd>A</kbd>
       <span class="sound">clap</span>
     </div>
-    <div data-key="83" class="key">
+    <div data-key="83" data-letter="S" class="key">
       <kbd>S</kbd>
       <span class="sound">hihat</span>
     </div>
-    <div data-key="68" class="key">
+    <div data-key="68" data-letter="D" class="key">
       <kbd>D</kbd>
       <span class="sound">kick</span>
     </div>
-    <div data-key="70" class="key">
+    <div data-key="70" data-letter="F" class="key">
       <kbd>F</kbd>
       <span class="sound">openhat</span>
     </div>
-    <div data-key="71" class="key">
+    <div data-key="71" data-letter="G" class="key">
       <kbd>G</kbd>
       <span class="sound">boom</span>
     </div>
-    <div data-key="72" class="key">
+    <div data-key="72" data-letter="H" class="key">
       <kbd>H</kbd>
       <span class="sound">ride</span>
     </div>
-    <div data-key="74" class="key">
+    <div data-key="74" data-letter="J" class="key">
       <kbd>J</kbd>
       <span class="sound">snare</span>
     </div>
-    <div data-key="75" class="key">
+    <div data-key="75" data-letter="K" class="key">
       <kbd>K</kbd>
       <span class="sound">tom</span>
     </div>
-    <div data-key="76" class="key">
+    <div data-key="76" data-letter="L" class="key">
       <kbd>L</kbd>
       <span class="sound">tink</span>
     </div>
   </div>
   <!-- theese are the audio files -->
-  <audio data-key="65" src="sounds/clap.wav"></audio>
-  <audio data-key="83" src="sounds/hihat.wav"></audio>
-  <audio data-key="68" src="sounds/kick.wav"></audio>
-  <audio data-key="70" src="sounds/openhat.wav"></audio>
-  <audio data-key="71" src="sounds/boom.wav"></audio>
-  <audio data-key="72" src="sounds/ride.wav"></audio>
-  <audio data-key="74" src="sounds/snare.wav"></audio>
-  <audio data-key="75" src="sounds/tom.wav"></audio>
-  <audio data-key="76" src="sounds/tink.wav"></audio>
+  <audio data-key="65" data-letter="A" src="sounds/clap.wav"></audio>
+  <audio data-key="83" data-letter="S" src="sounds/hihat.wav"></audio>
+  <audio data-key="68" data-letter="D" src="sounds/kick.wav"></audio>
+  <audio data-key="70" data-letter="F" src="sounds/openhat.wav"></audio>
+  <audio data-key="71" data-letter="G" src="sounds/boom.wav"></audio>
+  <audio data-key="72" data-letter="H" src="sounds/ride.wav"></audio>
+  <audio data-key="74" data-letter="J" src="sounds/snare.wav"></audio>
+  <audio data-key="75" data-letter="K" src="sounds/tom.wav"></audio>
+  <audio data-key="76" data-letter="L" src="sounds/tink.wav"></audio>
   
   
   <!-- java script -->
-  <script>
-
-    const audio = document.querySelector('audio');
-    const keys = document.querySelectorAll('.keys');
-    const key = document.querySelector('key');
-
-    function play(e) {
-      console.log("Keyboard press")
-      console.log(e.keyCode)
-
-      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-      const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-
-      key.classList.add('playing');
-      audio.play();
-
-    }
-
-    // Creating functions
-    function endSound(e) {
-      //remove playing class
-      e.target.classList.remove('playing');
-    }
-
-    function ontouchtest (e){
-      // to make mouseover work as well as having the keys to press(also for ios/mobile compatibility(posibility(maybe in a diferent function)))
-      console.log("Click")
-      console.log(e.target)
-
-      // replace e.keycode with e.target (the data-key artribute)
-      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-      const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-
-      key.classList.add('playing');
-      audio.play();
-      
-
-    }
-
-    keys.forEach(function (key) {
-      return key.addEventListener("transitionend", endSound);
-    })
+  <script  src="index.js">
 
 
-    // listening and calling a function
-    window.addEventListener('keydown', play);
-    // window.addEventListener('ontouchstart', ontouchtest );
-    window.addEventListener('click', ontouchtest);
   </script>
 
 
