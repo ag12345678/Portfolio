@@ -23,8 +23,6 @@ const audio = document.querySelector('audio');
       audio.play();
     }
     
-    function ontouchtest (e){
-    }
 
     // Creating functions
     function endSound(e) {
@@ -38,8 +36,6 @@ const audio = document.querySelector('audio');
     })
 
     window.addEventListener('keydown', onKeyPress);
-    window.addEventListener('ontouchstart', ontouchtest );
-
     keys.forEach(function (key) {
       key.addEventListener('click', onClick);
     })
