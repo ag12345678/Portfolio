@@ -22,6 +22,9 @@ const audio = document.querySelector('audio');
       key.classList.add('playing');
       audio.play();
     }
+    
+    function ontouchtest (e){
+    }
 
     // Creating functions
     function endSound(e) {
@@ -35,11 +38,10 @@ const audio = document.querySelector('audio');
     })
 
     window.addEventListener('keydown', onKeyPress);
-    // window.addEventListener('ontouchstart', ontouchtest );
+    window.addEventListener('ontouchstart', ontouchtest );
 
     keys.forEach(function (key) {
       key.addEventListener('click', onClick);
     })
-    
-    
    
+        
