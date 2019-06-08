@@ -1,0 +1,9 @@
+Game - things to do
+1. spawn a car
+   set a position for the car
+   make positions more random or 1 of 3
+   asign them different colours
+   for them to move down the screen at a certain constant speed
+   for them to end the game if they are hit
+   to make it possible to beat
+   only 2 cars can spaawn next to each other
