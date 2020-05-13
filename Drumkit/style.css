@@ -1,6 +1,6 @@
 html {
   font-size: 10px;
-  background: url(https://cdn3-www.gamerevolution.com/assets/uploads/2018/05/rock-band-4-network.jpg) bottom center;
+  background: url(https://static.timesofisrael.com/www/uploads/2019/12/WhatsApp-Image-2019-12-17-at-08.19.52.jpeg) bottom center;
   background-size: cover;
 }
 
@@ -23,7 +23,7 @@ html {
 
 
 .key {
-  border: .4rem solid #8E2E6A;
+  border: .4rem solid rgb(0, 28, 121);
   border-radius: .5rem;
   margin: 1rem;
   font-size: 1.5rem;
@@ -31,8 +31,8 @@ html {
   transition: all .07s ease;
   width: 10rem;
   text-align: center;
-  color: blue;
-  background: #368E2E;
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
   text-shadow: 0 0 .5rem;
 }
 
@@ -49,8 +49,8 @@ html {
 }
 
 .playing {
-  transform: scale(1.75);
-  border-color: #08efff;
+  transform: scale(1.25);
+  border-color: #974400;
   /* box-shadow: 0 0 1rem #ff8800; */
 }
 
@@ -63,5 +63,5 @@ kbd {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: .1rem;
-  color: #36e014;
+  color: #ff0000;
 }

@@ -17,13 +17,13 @@
     <input id="blur" type="range" name="blur" min="0" max="25" value="20" data-sizing="px">
 
     <label for="bg">Background Color</label>
-    <input id="bg" type="color" name="bg" value="#326e96">
+    <input id="bg" type="color" name="bg" value="#000000">
 
     <label for="bgimg">Background Color For Image</label>
-    <input id="bgimg" type="color" name="bgimg" value="#32963a">
+    <input id="bgimg" type="color" name="bgimg" value="#001d7e">
   </div>
 
-  <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+  <img src="https://ak.picdn.net/shutterstock/videos/13347740/thumb/1.jpg">
 
   <style>
     /* START HERE */
@@ -31,10 +31,10 @@
     /* 2. Add variables */
 
     :root {
-      --bg: #326e96;
-      --bgimg: #32963a;
-      --blur: 2px;
-      --padding: 10px;
+      --bg: #000000;
+      --bgimg: #001d7e;
+      --blur: 0px;
+      --padding: 0px;
     }
 
     /* 1. demonstrate img attributes  */
@@ -52,14 +52,14 @@
     body {
       text-align: center;
       background: var(--bg);
-      color: white;
+      color: rgb(255, 255, 255);
       font-family: 'helvetica neue', sans-serif;
       font-weight: 100;
       font-size: 50px;
     }
 
     .controls {
-      margin-bottom: 50px;
+      margin-bottom: 50px
     }
 
     input {
@@ -67,7 +67,7 @@
     }
 
     h3 {
-      color: #3fd14b;
+      color: #ff8800;
     }
   </style>
 
@@ -129,15 +129,6 @@
     function changeh3() {
 
       console.log(this)
-
-      // write the code to change heading
-      // document.documentElement.style.setProperty('--h3', `${this.value}`)
-
-      h3Input.style.fontSize = '1.5em';
-      h3Input.style.color = '#BADA55';
-      h3Input.style.borderPadding = '1em';
-      h3Input.style.textShadow = '-4px -4px 5px #ff0000';
-
 
     }
 
