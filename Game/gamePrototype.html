@@ -16,6 +16,7 @@
         var myGamePiece;
         var car1;
         var gameLane;
+        var Cars = [];
 
         function startGame() {
             myGameArea.start();
@@ -43,6 +44,7 @@
                 window.addEventListener('keyup', function (e) {
                     myGameArea.key = false;
                 })
+                this.frameNo = 0;
             },
             clear: function () {
                 this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -68,8 +70,28 @@
             }
         }
 
+
+        function everyinterval(n) {
+            if ((myGameArea.frameNo / n) % 1 == 0) {
+                return true;
+            }
+            return false;
+        }
+
         function updateGameArea() {
-            myGameArea.clear();
+            var x, y;
+
+            myGameArea.frameNo += 1;
+            if (myGameArea.frameNo == 1 || everyinterval(150)) {
+                x = 400;
+                y = x - 200
+                myObstacles.push(new component(50, 600, "green", x, y));
+            }
+            for (i = 0; i < myObstacles.length; i += 1) {
+                myObstacles[i].x += -1;
+                myObstacles[i].update();
+            }
+
             if (myGameArea.key && myGameArea.key == 39) {
                 myGamePiece.x = 1200;
             }
@@ -79,6 +101,8 @@
             if (myGameArea.key && myGameArea.key == 40) {
                 myGamePiece.x = 710;
             }
+            myGameArea.clear();
+
 
             car1.y = car1.y + 2;
 
@@ -92,13 +116,14 @@
 
             if (car1.y + 100 == myGamePiece.y && car1.x == myGamePiece.x) {
                 // car1.speedY = -1;
-                // startGame();
-                // alert("end of game");
+                startGame();
+                alert("end of game");
             }
 
         }
     </script>
-    <p>Make sure this window has focus, then you can use the arrow keys on you keyboard to move the red square.</p>
+    <p>Make sure this window has focus, then you can use the arrow keys on you keyboard to move the white square out of
+        the way of the grey squares.</p>
 </body>
 
 </html>
